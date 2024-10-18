@@ -6,12 +6,11 @@ import {
   LinearScale,
   PointElement,
   LineElement,
-  CategoryScale, // Importa a escala de categorias
+  CategoryScale,
   Tooltip,
   Legend,
 } from 'chart.js';
 
-// Registre os componentes necessários do Chart.js
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Tooltip, Legend);
 
 const data = {
