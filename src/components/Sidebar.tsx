@@ -1,6 +1,6 @@
 import React from 'react';
 import { List, ListItemText, Drawer, Box, Typography } from '@mui/material';
-import ListItemButton from '@mui/material/ListItemButton'; // Use ListItemButton no lugar de ListItem com button
+import ListItemButton from '@mui/material/ListItemButton';
 
 function Sidebar() {
   return (
