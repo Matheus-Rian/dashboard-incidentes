@@ -7,32 +7,30 @@ const IncidentByMonth = () => {
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    fetch('https://data.cityofnewyork.us/resource/erm2-nwe9.json')
+    const today = new Date();
+    const lastMonth = new Date(today.getFullYear(), today.getMonth());
+    const oneYearAgo = new Date(lastMonth.getFullYear() - 1, lastMonth.getMonth(), 1);
+
+    const formatDate = (date: Date) => {
+      return date.toISOString().split('T')[0]; 
+    };
+
+    const startDate = formatDate(oneYearAgo); 
+    const endDate = formatDate(lastMonth);
+
+    const apiUrl = `https://data.cityofnewyork.us/resource/erm2-nwe9.json?$select=date_trunc_ym(created_date)%20as%20month,%20count(*)%20as%20incident_count&$where=created_date%20between%20'${startDate}'%20and%20'${endDate}'&$group=month&$order=month`;
+
+    fetch(apiUrl)
       .then((response) => {
         if (!response.ok) {
           throw new Error('Erro ao buscar dados');
         }
         return response.json();
       })
-      .then((incidents) => {
-        const incidentCountsByMonth: { [key: string]: number } = {};
-
-        incidents.forEach((incident: any) => {
-          if (incident.created_date) {
-            const date = new Date(incident.created_date);
-            const month = date.toLocaleString('default', { month: 'long' });
-
-            if (incidentCountsByMonth[month]) {
-              incidentCountsByMonth[month] += 1;
-            } else {
-              incidentCountsByMonth[month] = 1;
-            }
-          }
-        });
-
-        const formattedData = Object.keys(incidentCountsByMonth).map((month) => ({
-          name: month,
-          value: incidentCountsByMonth[month],
+      .then((data) => {
+        const formattedData = data.map((entry: any) => ({
+          name: new Date(entry.month).toLocaleString('default', { month: 'long' }),
+          value: parseInt(entry.incident_count, 10),
         }));
 
         setBarChartData(formattedData);

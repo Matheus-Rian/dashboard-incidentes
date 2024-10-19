@@ -1,9 +1,14 @@
 import { Container, Grid, Button, Typography } from '@mui/material';
 import Sidebar from './components/Sidebar';
+import IncidentTable from './components/IncidentTable';
 import IncidentCard from './components/IncidentCard';
-import IncidentChart from './components/IncidentChart'; // Certifique-se de que esse componente existe
-import IncidentByMonth from './components/IncidentByMonth'; // Componente que usa a API de incidentes de Nova York
+
+import IncidentByMonth from './components/IncidentByMonth'; 
 import SelectVariants from './components/SelectVariants';
+import IncidentCard2 from './components/IncidentCard2';
+import IncidentChart from './components/IncidentChart';
+import Incident from './components/Incident';
+
 
 function App() {
   return (
@@ -17,10 +22,11 @@ function App() {
 
         <Grid container spacing={3}>
           <Grid item xs={12} md={6}>
-            <IncidentCard title="Quantidade de Incidentes" value="365" percentage="+24%" />
+            <IncidentCard title = 'Incidentes Abertos do Presente Mês' />
           </Grid>
+
           <Grid item xs={12} md={6}>
-            <IncidentCard title="Incidentes Resolvidos" value="217" percentage="-17%" />
+            <IncidentCard2 title = 'Incidentes Fechados do Presente Mês' />
           </Grid>
           <Grid item xs={12}>
             <SelectVariants />
@@ -30,7 +36,15 @@ function App() {
           </Grid>
 
           <Grid item xs={12}>
-            <IncidentByMonth /> {/* Substituindo o BarChartCard estático pelo componente que usa API */}
+            <IncidentByMonth /> 
+          </Grid>
+
+          <Grid item xs={12}>
+            <IncidentTable />
+          </Grid>
+
+          <Grid item xs={12}>
+            <Incident />
           </Grid>
           <Grid /* Histórias US05 e US04- SQUAD 1 
            - Implementar Mapa
