@@ -1,7 +1,77 @@
-header {
-  padding: 20px;
-  height: 56px;
+/* App.css */
+.app-container {
   display: flex;
-  align-items: center;
-  background-color: #d1d5db;
+}
+
+.header {
+  background-color: #34495e;
+  color: #ffffff;
+  padding: 15px 0;
+  text-align: center;
+  font-size: 1.75em;
+  font-weight: bold;
+}
+
+.sidebar {
+  background-color: #2c3e50;
+  color: #ffffff;
+  width: 240px;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  min-height: 100vh;
+}
+
+.app-title {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.incident-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+}
+
+.chart-container {
+  padding: 20px;
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.export-button {
+  background-color: #1abc9c;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.export-button:hover {
+  background-color: #16a085;
+}
+
+.button-container {
+  margin-top: 20px;
+  text-align: right;
+}
+
+@media (max-width: 768px) {
+  .app-container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    box-shadow: none;
+  }
+
+  .incident-card {
+    margin-bottom: 20px;
+  }
 }
