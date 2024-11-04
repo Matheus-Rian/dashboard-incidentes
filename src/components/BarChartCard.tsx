@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card, CardContent, Typography } from '@mui/material';
-import { Bar } from 'react-chartjs-2';
+import { Bar, Line } from 'react-chartjs-2';
 import { Chart, registerables } from 'chart.js';
 
 Chart.register(...registerables);
@@ -30,10 +30,6 @@ const BarChartCard: React.FC<BarChartCardProps> = ({ title, data }) => {
       legend: {
         position: 'top' as const,
       },
-      title: {
-        display: true,
-        text: title,
-      },
     },
   };
 
@@ -43,9 +39,7 @@ const BarChartCard: React.FC<BarChartCardProps> = ({ title, data }) => {
         <Typography variant="h6" gutterBottom>
           {title}
         </Typography>
-        <div style={{ height: '550px' }}>
-          <Bar data={chartData} options={options} />
-        </div>
+          <Line data={chartData} options={options} />
       </CardContent>
     </Card>
   );
