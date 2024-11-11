@@ -5,21 +5,25 @@
 
 .header {
   background-color: #34495e;
-  color: #ffffff;
+  color: #fff;
   padding: 15px 0;
   text-align: center;
   font-size: 1.75em;
   font-weight: bold;
 }
 
+
+
 .sidebar {
   background-color: #2c3e50;
-  color: #ffffff;
-  width: 240px;
-  padding: 20px;
+  color: #2f44cb;
+  width: 340px;
+  padding: 0;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
   min-height: 100vh;
+  justify-content: space-around;
 }
+
 
 .app-title {
   margin-top: 40px;
