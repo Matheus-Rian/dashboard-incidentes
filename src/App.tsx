@@ -14,8 +14,9 @@ import './App.css';
 function App() {
   return (
     <>
-      <header>
-        <Sidebar />
+      {/* Header */}
+      <header className="header">
+        <Sidebar className="sidebar" />
       </header>
       <div style={{ display: 'flex' }}>
         <Container maxWidth={false} disableGutters sx={{ paddingX: 3, paddingY: 3 }}>
@@ -45,23 +46,17 @@ function App() {
             <Grid item xs={12} md={12}>
               <IncidentTable />
             </Grid>
-
             <Grid item xs={12}>
               <Incident />
             </Grid>
-            <Grid /* Histórias US05 e US04- SQUAD 1 
-            - Implementar Mapa
-            - Filtrar pelo nome da agência e por região
-            - Olhar os itens filhos no Jira
-            */ >
-            </Grid>
-            <Grid /* Histórias US06 - SQUAD 2
-            - Implementar lista
-            - Filtrar pelo CEP(incident_zip)
-            - Olhar os itens filhos no Jira 
-            */> </Grid>
-            <Grid item xs={12} style={{ marginTop: '20px', textAlign: 'right' }}>
-              <Button variant="contained" color="primary">Exportar Relatório</Button>
+
+            {/* Placeholder para Implementações Futuras */}
+            <Grid /* Histórias US05 e US04- SQUAD 1 */ />
+            <Grid /* Histórias US06 - SQUAD 2 */ />
+
+            {/* Botão de Exportação */}
+            <Grid item xs={12} className="button-container">
+              <Button className="export-button" variant="contained">Exportar Relatório</Button>
             </Grid>
           </Grid>
         </Container>
