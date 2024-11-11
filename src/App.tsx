@@ -2,11 +2,13 @@ import { Container, Grid, Button, Typography } from '@mui/material';
 import Sidebar from './components/Sidebar';
 import IncidentTable from './components/IncidentTable';
 import IncidentCard from './components/IncidentCard';
+import IncidentCard3 from './components/IncidentCard3';
 import IncidentByMonth from './components/IncidentByMonth'; 
 import SelectVariants from './components/SelectVariants';
 import IncidentCard2 from './components/IncidentCard2';
 import IncidentChart from './components/IncidentChart';
 import Incident from './components/Incident';
+import DoughnutCard from './components/DoughnutCard';
 import './App.css';
 
 function App() {
@@ -16,38 +18,32 @@ function App() {
       <header className="header">
         <Sidebar className="sidebar" />
       </header>
-
-      {/* Conteúdo Principal */}
-      <div className="app-container">
-        <Container maxWidth="lg">
-          <Typography variant="h4" gutterBottom className="app-title">
-            Dashboard de Incidentes de Segurança
-          </Typography>
-
+      <div style={{ display: 'flex' }}>
+        <Container maxWidth={false} disableGutters sx={{ paddingX: 3, paddingY: 3 }}>
           <Grid container spacing={3}>
-            {/* Cartões de Incidentes */}
-            <Grid item xs={12} md={6}>
-              <IncidentCard title="Incidentes Abertos do Presente Mês" className="incident-card" />
-            </Grid>
-            <Grid item xs={12} md={6}>
-              <IncidentCard2 title="Incidentes Fechados do Presente Mês" className="incident-card" />
+            <Grid item xs={12} md={4}>
+              <IncidentCard title = 'Incidentes Abertos do Presente Mês' />
             </Grid>
 
-            {/* Filtros e Gráficos */}
-            <Grid item xs={12}>
+            <Grid item xs={12} md={4}>
+              <IncidentCard2 title = 'Incidentes Fechados do Presente Mês' />
+            </Grid>
+            <Grid item xs={12} md={4}>
+              <IncidentCard3 title = 'Porcentagem em Relação ao Mês Passado' />
+            </Grid>
+            <Grid item xs={12} md={4}>
+              <IncidentChart />
+            </Grid>
+            <Grid item xs={12} md={4}>
+              <IncidentByMonth /> 
+            </Grid>
+            <Grid item xs={12} md={4}>
+              <DoughnutCard /> 
+            </Grid>
+            <Grid item xs={12} md={12}>
               <SelectVariants />
             </Grid>
-            <Grid item xs={12}>
-              <div className="chart-container">
-                <IncidentChart />
-              </div>
-            </Grid>
-            <Grid item xs={12}>
-              <IncidentByMonth />
-            </Grid>
-
-            {/* Tabela e Lista de Incidentes */}
-            <Grid item xs={12}>
+            <Grid item xs={12} md={12}>
               <IncidentTable />
             </Grid>
             <Grid item xs={12}>
