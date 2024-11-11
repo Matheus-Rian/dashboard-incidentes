@@ -1,0 +1,13 @@
+{
+  "title": "Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum",
+  "text": "Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum",
+  "button": [
+    {
+      "title": "Lorem Ipsum"
+    },
+    {
+      "title": "Lorem Ipsum",
+      "color": "#fff"
+    }
+  ]
+}

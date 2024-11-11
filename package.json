@@ -14,10 +14,16 @@
     "@emotion/styled": "^11.13.0",
     "@mui/icons-material": "^6.1.6",
     "@mui/material": "^6.1.3",
+    "@types/styled-components": "^5.1.34",
+    "antd": "^5.22.0",
     "chart.js": "^4.4.4",
     "react": "^18.3.1",
+    "react-awesome-reveal": "^4.2.14",
     "react-chartjs-2": "^5.2.0",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "react-i18next": "^15.1.1",
+    "react-router-dom": "^6.28.0",
+    "styled-components": "^6.1.13"
   },
   "devDependencies": {
     "@eslint/js": "^9.9.0",
