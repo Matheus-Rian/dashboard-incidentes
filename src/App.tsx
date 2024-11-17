@@ -9,7 +9,9 @@ import IncidentCard2 from './components/IncidentCard2';
 import IncidentChart from './components/IncidentChart';
 import Incident from './components/Incident';
 import DoughnutCard from './components/DoughnutCard';
+import Map from './components/map';
 import './App.css';
+
 
 function App() {
   return (
@@ -49,11 +51,18 @@ function App() {
             <Grid item xs={12}>
               <Incident />
             </Grid>
-            <Grid /* Histórias US05 e US04- SQUAD 1 
-            - Implementar Mapa
-            - Filtrar pelo nome da agência e por região
-            - Olhar os itens filhos no Jira
-            */ >
+            <Grid item xs={12}>
+            <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '16px' }}>
+  <header style={{ marginBottom: '24px' }}>
+    <h1 style={{ fontSize: '1.5rem', fontWeight: 'bold', color: '#1f2937' }}>Dashboard de Incidentes NYC</h1>
+    <p style={{ color: '#4b5563' }}>Mapa de calor dos incidentes do último mês</p>
+  </header>
+  <main>
+    <div style={{ backgroundColor: '#ffffff', borderRadius: '0.5rem', boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.1)', padding: '16px' }}>
+      <Map />
+    </div>
+  </main>
+</div>
             </Grid>
             <Grid /* Histórias US06 - SQUAD 2
             - Implementar lista
