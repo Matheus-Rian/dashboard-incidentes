@@ -5,15 +5,17 @@ import IncidentTable from './components/IncidentTable';
 import IncidentCard from './components/IncidentCard';
 import IncidentCard3 from './components/IncidentCard3';
 import IncidentByMonth from './components/IncidentByMonth'; 
-import SelectVariants from './components/SelectVariants';
+import AgencyBarChart from './components/AgencyBarchart.tsx';
 import IncidentCard2 from './components/IncidentCard2';
 import IncidentChart from './components/IncidentChart';
 import Incident from './components/Incident';
 import DoughnutCard from './components/DoughnutCard';
+import Map from './components/map';
 import Page from './components/page.tsx';
 import Index from './pages/Home/index.tsx'
 import './App.css';
 import './App.tsx';
+
 
 function App() {
   return (
@@ -60,8 +62,11 @@ function HomePage() {
       <Grid item xs={12} md={4}>
         <DoughnutCard /> 
       </Grid>
-      <Grid item xs={12} md={12}>
-        <SelectVariants />
+      <Grid item xs={12} md={8}>
+        <Map />
+      </Grid>
+      <Grid item xs={12} md={4}>
+        <AgencyBarChart /> 
       </Grid>
       <Grid item xs={12} md={12}>
         <IncidentTable />
