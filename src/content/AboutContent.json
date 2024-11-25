@@ -1,15 +1,15 @@
 {
-  "title": "Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum",
-  "text": "Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum",
+  "title": "Veja Como Funciona na Prática",
+  "text": "Se você está pronto para transformar a forma como sua equipe gerencia incidentes, agende uma demonstração gratuita. Mostre à sua equipe como o Dashboard pode ser uma ferramenta indispensável para uma resposta mais rápida e precisa.",
   "section": [
     {
-      "title": "Lorem Ipsum?",
-      "content": "Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum",
+      "title": "Receba Alertas Personalizados",
+      "content": "Acompanhe tudo de perto com o nosso sistema de alertas. Configure notificações em tempo real para ser informado assim que um novo incidente ocorrer ou quando um evento atingir determinados critérios. ",
       "icon": "notes.svg"
     },
     {
-      "title": "Lorem Ipsum",
-      "content": "Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum",
+      "title": "Análises e Relatórios Detalhados",
+      "content": "Além de visualizar os incidentes, o Dashboard também oferece relatórios detalhados e gráficos que ajudam a analisar padrões de ocorrência.",
       "icon": "notes.svg"
     }
   ]
