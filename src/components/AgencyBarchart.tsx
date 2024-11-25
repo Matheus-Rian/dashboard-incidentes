@@ -163,7 +163,7 @@ const AgencyIncidentBarChart = () => {
         {loading && <Typography>Carregando dados...</Typography>}
         {error && <Typography color="error">{error}</Typography>}
 
-        {!loading && !error && <Bar data={chartData} options={Option} />}
+        {!loading && !error && <Bar data={chartData} />}
       </CardContent>
     </Card>
   );

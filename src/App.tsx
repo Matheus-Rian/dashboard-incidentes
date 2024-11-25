@@ -1,5 +1,5 @@
-import { Container, Grid, Button, Typography } from '@mui/material';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { Container, Grid, Button } from '@mui/material';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Sidebar from './components/Sidebar';
 import IncidentTable from './components/IncidentTable';
 import IncidentCard from './components/IncidentCard';
@@ -11,7 +11,6 @@ import IncidentChart from './components/IncidentChart';
 import Incident from './components/Incident';
 import DoughnutCard from './components/DoughnutCard';
 import Map from './components/map';
-import Page from './components/page.tsx';
 import Index from './pages/Home/index.tsx'
 import './App.css';
 import './App.tsx';
@@ -31,7 +30,7 @@ function App() {
             <Route path="/dashboard" element={<HomePage/>} />
             
       
-            <Route path="/landing" element={<Index/>} />
+            <Route path="/" element={<Index/>} />
 
           
           </Routes>
