@@ -1,6 +1,6 @@
 const routes = [
   {
-    path: "/",
+    path: "/dashboard-incidentes",
     component: "Home",
   },
 ];
