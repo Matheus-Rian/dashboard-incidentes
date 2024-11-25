@@ -30,7 +30,7 @@ function App() {
             <Route path="/dashboard" element={<HomePage/>} />
             
       
-            <Route path="/" element={<Index/>} />
+            <Route path="/dashboard-incidentes" element={<Index/>} />
 
           
           </Routes>

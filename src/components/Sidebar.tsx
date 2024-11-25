@@ -15,7 +15,7 @@ const Sidebar: React.FC<SidebarProps> = ({ className }) => {
         </Typography>
 
         <Box>
-          <Button sx={{ backgroundColor: '#303030' }} color="inherit" component={Link} to="/">
+          <Button sx={{ backgroundColor: '#303030' }} color="inherit" component={Link} to="/dashboard-incidentes">
             Sobre Nós
           </Button>
           <Button sx={{ backgroundColor: '#303030' }} color="inherit" component={Link} to="/dashboard">
