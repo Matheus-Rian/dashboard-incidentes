@@ -49,14 +49,14 @@ const IncidentDoughnutChart: React.FC = () => {
   }
 
   const topFiveIncidents = incidentData.slice(0, 5);
-  const othersCount = incidentData.slice(5).reduce((sum, incident) => sum + parseInt(incident.incident_count, 10), 0);
+  const othersCount = incidentData.slice(5).reduce((sum, incident) => sum + Number(incident.incident_count), 0);
 
   const chartData = {
     labels: [...topFiveIncidents.map((incident) => incident.complaint_type), 'Outros'],
     datasets: [
       {
         label: 'Incidentes',
-        data: [...topFiveIncidents.map((incident) => parseInt(incident.incident_count, 10)), othersCount],
+        data: [...topFiveIncidents.map((incident) => Number(incident.incident_count)), othersCount],
         backgroundColor: [
           '#FF6384',
           '#36A2EB',
@@ -75,7 +75,7 @@ const IncidentDoughnutChart: React.FC = () => {
     maintainAspectRatio: true,
     plugins: {
       legend: {
-        position: 'right',
+        position: "right" as "top" | "bottom" | "left" | "right" | "center" | "chartArea",
       },
     },
   };

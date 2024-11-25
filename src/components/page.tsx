@@ -1,4 +1,3 @@
-import React from 'react';
 import { Container, Typography, Button, Grid, Box, TextField, Card, CardContent } from '@mui/material';
 
 function landingPage() {
@@ -132,7 +131,7 @@ function landingPage() {
 
       {/* Rodapé */}
       <Box sx={{ backgroundColor: '#333', color: 'white', paddingY: '2rem' }}>
-        <Container maxWidth="lg" textAlign="center">
+        <Container maxWidth="lg" sx={{ textAlign: "center" }}>
           <Typography variant="body2">
             © 2024 Nossa Empresa. Todos os direitos reservados.
           </Typography>

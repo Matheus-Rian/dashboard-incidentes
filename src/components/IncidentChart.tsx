@@ -59,14 +59,14 @@ const IncidentChart: React.FC = () => {
         label: 'Incidentes',
         data: incidentData
           .filter((incident) => incident.borough && incident.borough !== 'Unspecified')
-          .map((incident) => parseInt(incident.incident_count, 10)),
+          .map((incident) => Number(incident.incident_count)),
         backgroundColor: 'rgba(75,192,192,1)',
       },
     ],
   };
 
   const chartOptions = {
-    indexAxis: 'y',
+    indexAxis: 'y' as "x" | "y" | undefined,
     scales: {
       x: {
         beginAtZero: true,

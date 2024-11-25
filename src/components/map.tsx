@@ -43,7 +43,7 @@ const HeatmapLayer = ({ points }: { points: IncidentPoint[] }) => {
 const IncidentHeatmap = () => {
   const [points, setPoints] = useState<IncidentPoint[]>([]);
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
+  const [, setError] = useState<string | null>(null);
   const [complaintType, setComplaintType] = useState<string>('');
   const [borough, setBorough] = useState<string>('');
   const [filters, setFilters] = useState<{ complaintType: string; borough: string }>({
